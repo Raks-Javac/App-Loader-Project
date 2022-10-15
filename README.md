@@ -5,29 +5,29 @@ A way to eliminate wrapping loader for every widget to show loader and having a 
 
 ##  Running the project on your machine 
 
-# Install the flutter sdk 
+- Install the flutter sdk 
 
-# "flutter doctor -v" make sure sdk requirement is fulfiled
+- "flutter doctor -v" make sure sdk requirement is fulfiled
 
-# "flutter pub get -v"  under project directory
+- "flutter pub get -v"  under project directory
 
-# "flutter run -v"  to run project on your machine
-
-
+- "flutter run -v"  to run project on your machine
 
 
 
 
 
 
-## Installation 
 
-# Android
 
-flutter build apk 
+# Installation 
 
-# IOS
+## Android
 
-flutter build ipa
+ - flutter build apk 
+
+## IOS
+
+- flutter build ipa
 
 
