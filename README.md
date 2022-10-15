@@ -1,16 +1,33 @@
-# loader_project
+# App loader project
 
-A new Flutter project.
+A way to eliminate wrapping loader for every widget to show loader and having a reusable loader throughout your flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+##  Running the project on your machine 
 
-A few resources to get you started if this is your first Flutter project:
+# Install the flutter sdk 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# "flutter doctor -v" make sure sdk requirement is fulfiled
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# "flutter pub get -v"  under project directory
+
+# "flutter run -v"  to run project on your machine
+
+
+
+
+
+
+
+
+## Installation 
+
+# Android
+
+flutter build apk 
+
+# IOS
+
+flutter build ipa
+
+
