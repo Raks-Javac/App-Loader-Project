@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:loader_project/src/core/base_screen/base_view.dart';
 import 'package:loader_project/src/features/home/presentation/controller/home_provider_.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
+class OtherScreen extends StatelessWidget {
+  const OtherScreen({super.key});
 
-  final String title;
   @override
   Widget build(BuildContext context) {
     return BaseView<HomeViewModel>(
@@ -17,7 +16,7 @@ class MyHomePage extends StatelessWidget {
   Widget _buildScreen(BuildContext context, HomeViewModel viewModel) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: const Text("Other Screen"),
       ),
       body: Center(
         child: Column(
@@ -30,7 +29,7 @@ class MyHomePage extends StatelessWidget {
               height: 5,
             ),
             MaterialButton(
-              onPressed: viewModel.startLoading,
+              onPressed: () => viewModel.startLoading(isOtherScreen: true),
               color: Theme.of(context).primaryColor,
               child: Text(
                 "Start Loading with provider",
@@ -42,7 +41,8 @@ class MyHomePage extends StatelessWidget {
               height: 5,
             ),
             MaterialButton(
-              onPressed: viewModel.startLoadingOverlay,
+              onPressed: () =>
+                  viewModel.startLoadingOverlay(isOtherScreen: true),
               color: Theme.of(context).primaryColor,
               child: Text(
                 "Start Loading with overlay",

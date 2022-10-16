@@ -23,17 +23,13 @@ class BaseView<T extends BaseViewModel> extends StatelessWidget {
   Widget _buildScreenContent(
           BuildContext context, T viewModel, Widget? child) =>
       !viewModel.isInitialized && viewModel.isLoading == true
-          ? Container(
-              color: Theme.of(context).scaffoldBackgroundColor,
-              child: const Center(child: FullScreenLoader()))
+          ? const FullScreenLoader()
           : Stack(
               children: [
                 builder(context, viewModel),
                 Visibility(
                   visible: viewModel.isLoading,
-                  child: const Center(
-                    child: Center(child: FullScreenLoader()),
-                  ),
+                  child: const FullScreenLoader(),
                 )
               ],
             );

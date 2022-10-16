@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
+const String lottieLoaderPath = "assets/lottie/loading_lottie.json";
 
 class FullScreenLoader extends StatelessWidget {
   const FullScreenLoader({super.key});
@@ -6,20 +9,21 @@ class FullScreenLoader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor:
+          Theme.of(context).scaffoldBackgroundColor.withOpacity(0.5),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: SizedBox(
-                width: 50,
-                height: 50,
-                child: CircularProgressIndicator(
-                  strokeWidth: 8,
-                  backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                      Theme.of(context).primaryColor),
-                )),
+              width: 100,
+              height: 100,
+              child: Lottie.asset(
+                lottieLoaderPath,
+                animate: true,
+                repeat: true,
+              ),
+            ),
           ),
         ],
       ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:loader_project/dependables.dart';
+import 'package:provider/provider.dart';
 
 import 'src/features/home/presentation/view/home_screen.dart';
 
+const String appTitle = 'Loader App';
 void main() {
   runApp(const MyApp());
 }
@@ -12,12 +15,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Loader App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: appProviders,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: appTitle,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: appTitle),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
